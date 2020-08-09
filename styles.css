@@ -94,11 +94,12 @@ p {
     color: whitesmoke; 
 }
 
-span {
+.content h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 40px;
     color: whitesmoke; 
+    display: inline;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -190,7 +191,7 @@ span {
         font-size: 20px;
     }
     
-    span {
+    .content h2 {
         font-size: 30px;
     }
 }
