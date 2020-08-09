@@ -92,12 +92,18 @@ h1{
     top:180px;
     left:40%;
 }
-P{
+.content-display{
     font-family: 'Raleway', sans-serif;
     font-weight:bolder;
     font-size:30px;
     color: whitesmoke; 
 }
+#amount-dis1{
+    position:relative;
+    bottom:65px;
+    left:44%;
+}
+
 
 h2{
     font-family: 'Raleway', sans-serif;
