@@ -5,51 +5,46 @@ body{
 }
 
 .header{
-    position:absolute;
-    top:70px;
-    left:150px;
+    text-align: center;
+    margin: 40px 0 25px;
 }
-h1{
-    color:rgb(14, 12, 34);
+.header h1{
+    color: #f7f7f7;
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
     letter-spacing: 0em;
 }
+
 .container{
     background-color: rgb(78, 84, 200);
     border:2px solid rgb(78, 84, 200);
     box-shadow: 6px 6px 22px -1px rgba(31,24,31,0.79);
     border-radius:15px;
     width:80%;
-    height:500px;
+    height: 520px;
     position:relative;
-    top:130px;
-    left:150px;
+    margin-left: 10%;
+    margin-top: 4%;
     margin-bottom: 20px;
 }
 
 .data{
-    margin-top: 20px;
-    margin-left: 30px;
-    position:relative;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .left{
-    position:absolute;
-    left:80px;
+    margin-left: -30px;
 }
-.right{
-    position:absolute;
-    top:0;
-    left:70%;
-}
+
 #exchange-amount {
     font: 600 1em 'Raleway', sans-serif;
     color: #26405e;
-    margin:10px;
-    padding:5px;
-    border:none;
-    border-radius:15px;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
     width:250px;
     height:40px;
     outline:none;
@@ -68,6 +63,7 @@ h1{
 }
 
 #from {
+    text-transform: uppercase;
     margin:10px;
     padding:5px;
     font: 600 1em 'Raleway', sans-serif;
@@ -80,28 +76,163 @@ h1{
 
 }
 
- #exchange-amount::placeholder{
-    font: 900 1em 'Raleway', sans-serif;
+#exchange-amount::placeholder{
+    font: 800 1em 'Raleway', sans-serif;
     color: #496e97;
     text-align: center;
-    text-transform: none;
+    text-transform: uppercase;
     letter-spacing: 0.01em;
 }
 .content{
-    position:absolute;
-    top:180px;
-    left:40%;
+    text-align: center;
+    margin-top: 8%;
 }
-P{
+p {
     font-family: 'Raleway', sans-serif;
-    font-weight:bolder;
-    font-size:30px;
+    font-weight: bolder;
+    font-size: 30px;
     color: whitesmoke; 
 }
 
-h2{
+span {
     font-family: 'Raleway', sans-serif;
-    font-weight:bolder;
-    font-size:60px;
+    font-weight: 600;
+    font-size: 40px;
     color: whitesmoke; 
+}
+
+@media only screen and (max-width: 1200px) {
+    .container{
+        width:80%;
+        height: 460px;
+    }
+
+    #exchange-amount {
+        margin: 8px;
+        padding: 5px;
+        width:200px;
+        height:35px;
+    }
+    
+    #to {
+        margin:8px;
+        padding:5px;
+        width:200px;
+        height:45px;
+    }
+    
+    #from {
+        margin: 8px;
+        padding:5px;
+        width: 200px;
+        height:45px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body{font-size: 16px;}
+
+    .container{
+        width: 90%;
+        margin-left: 5%;
+        height: 460px;
+    }
+
+    .data {
+        font-size: 87%;
+    }
+
+    #exchange-amount {
+        margin: 6px;
+        padding: 3px;
+        width: 200px;
+        height: 32px;
+    }
+    
+    #from,
+    #to {
+        margin: 5px;
+        padding:5px;
+        width: 180px;
+        height:35px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .header {margin-top: 30px;}
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        height: 100vh;
+    }
+
+    .data {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #to {
+        margin-top: 25px;
+    }
+
+    .content{
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    p {
+        font-size: 20px;
+    }
+    
+    span {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    #exchange-amount {
+        margin-left: 20px;
+        width: 150px;
+        height: 30px;
+        font-size: 85%;
+    }
+    
+    #from,
+    #to {
+        /* margin: 5px; */
+        width: 140px;
+        height: 35px;
+    }
+
+    #to {
+        margin-top: 20px;
+    }
+
+    .content{ margin-top: 15%;}
+} 
+@media only screen and (max-width: 320px) {
+    .header h1 {
+        font-size: 20px
+    }
+
+    #exchange-amount {
+        margin-left: 30px;
+        width: 150px;
+        height: 30px;
+        font-size: 85%;
+    }
+    
+    #from,
+    #to {
+        width: 120px;
+        height: 35px;
+    }
+
+    .content{ margin-top: 18%;}
+
 }
