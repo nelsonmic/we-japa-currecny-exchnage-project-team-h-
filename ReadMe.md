@@ -13,7 +13,6 @@
 We encountered issues while working on this project. Issues such as:
 
 - coming up with a UI for the project
-- Geting an API that does not have a base currency
 - coming up with a logic to make the work effective
 
 ## Contributing to this project
