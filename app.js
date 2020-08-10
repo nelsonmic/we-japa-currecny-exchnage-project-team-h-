@@ -3,7 +3,7 @@ let first = document.querySelector("#from");
 let second = document.querySelector("#to");
 let amountDisplay = document.querySelector("#amount-dis");
 let amountDisplayCurrency = document.querySelector("#amount-dis1");
-let fullAmountDisplay= document.querySelector("h2");
+let fullAmountDisplay = document.querySelector("h2");
 
 
 $.getJSON("http://data.fixer.io/api/latest?access_key=85cf2e6df606f6026cde0a4d03980bba&format=1", function(data){
@@ -19,7 +19,7 @@ $.getJSON("http://data.fixer.io/api/latest?access_key=85cf2e6df606f6026cde0a4d03
                 amountDisplayCurrency.textContent = first.value;
             }else{
                 // console.log("work harder");
-            }
+            };
         };
     }
     
@@ -28,7 +28,7 @@ $.getJSON("http://data.fixer.io/api/latest?access_key=85cf2e6df606f6026cde0a4d03
         for( pair in currencyRate){
             if(pair === second.value) {
                 arr.push(currencyRate[pair]);
-                converter()
+                converter();
             }else{
                 // console.log("work harder");
             };
